@@ -110,7 +110,7 @@ losses = []
 best_loss = float('inf')  # 초기값은 무한대로 설정
 
 # 학습 루프
-epochs = 1000
+epochs = 500
 for epoch in range(epochs):
     total_loss = 0
     model.train()  # 학습 모드로 설정

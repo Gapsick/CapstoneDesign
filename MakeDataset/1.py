@@ -27,7 +27,7 @@ for filename in os.listdir(input_folder):
         height, width, _ = image.shape
 
         # ROI 설정 (도로 영역만 남기기)
-        roi_top = int(height * 0.45)  # 상단 60% 잘라내기 (도로만 남기기)
+        roi_top = int(height * 0.6)  # 상단 60% 잘라내기 (도로만 남기기)
         roi = image[roi_top:height, :]  # 아래쪽 40%만 사용
 
         # 결과 이미지 저장 경로
