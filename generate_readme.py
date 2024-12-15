@@ -1,41 +1,19 @@
 # generate_readme.py
 
 # README 파일에 들어갈 내용
-readme_content = """# Autonomous RC Car Project
+readme_content = """# 🚗 Autonomous RC Car Project
 
 ## **프로젝트 개요**
-본 프로젝트는 Jetson Nano를 활용하여 자율 주행 RC카를 개발하는 것입니다.  
-PilotNet 모델을 사용하여 **End-to-End** 방식으로 경로를 추종하며 라인 트래킹을 수행합니다.
+본 프로젝트는 Jetson Nano를 활용하여 라인 트래킹 기반 자율주행 RC카를 개발하는 것을 목표로 합니다.  
+데이터 수집, 데이터 전처리, 모델 학습, 그리고 실시간 실행까지의 전체 파이프라인을 포함합니다.
 
 ---
 
 ## **폴더 구조**
-├── dataset_creation/ │ ├── 1_path_update.py │ ├── 2_check_missing_files.py │ ├── 3_remove_missing_files.py │ └── 4_angle_verification.py ├── dataset_preprocessing/ │ ├── 5_visualize_data_distribution.py │ ├── 6_oversampling.py │ ├── 6_1_combination.py │ └── 7_crop_and_augment.py ├── model_execution/ │ └── main_pilotnet_execution.py ├── best_pilotnet_model.pth ├── README.md └── generate_readme.py
+├── dataset_creation/ # 데이터셋 생성 및 정제 코드 │ ├── 1_path_update.py │ ├── 2_check_missing_files.py │ ├── 3_remove_missing_files.py │ └── 4_angle_verification.py ├── dataset_preprocessing/ # 전처리 및 데이터 증강 코드 │ ├── 5_visualize_data_distribution.py │ ├── 6_oversampling.py │ ├── 6_1_combination.py │ └── 7_crop_and_augment.py ├── model_execution/ # 모델 실행 코드 │ └── main_pilotnet_execution.py ├── best_pilotnet_model.pth # 최종 학습된 모델 ├── README.md # 프로젝트 설명 파일 └── generate_readme.py # README 자동 생성 코드
 
 yaml
 코드 복사
-
----
-
-## **파일 설명**
-
-### **1. dataset_creation**
-데이터셋 생성 및 정제를 위한 코드들입니다.  
-- **1_path_update.py**: 이미지 경로 수정  
-- **2_check_missing_files.py**: 누락된 파일 확인  
-- **3_remove_missing_files.py**: 누락된 파일 제거  
-- **4_angle_verification.py**: 잘못된 각도 데이터 확인 및 삭제  
-
-### **2. dataset_preprocessing**
-전처리 및 데이터 증강 코드입니다.  
-- **5_visualize_data_distribution.py**: 데이터 분포 시각화  
-- **6_oversampling.py**: 오버샘플링을 통해 데이터 균형 맞춤  
-- **6_1_combination.py**: 데이터셋을 균등하게 조합  
-- **7_crop_and_augment.py**: 이미지 자르기 및 데이터 증강 수행  
-
-### **3. model_execution**
-학습된 모델을 사용하여 RC카를 실행하는 코드입니다.  
-- **main_pilotnet_execution.py**: 모델을 로드하고 RC카를 제어  
 
 ---
 
@@ -61,4 +39,8 @@ yaml
 ```bash
 python3 dataset_creation/1_path_update.py
 python3 dataset_preprocessing/5_visualize_data_distribution.py
+2. 모델 실행
+bash
+코드 복사
+python3 model_execution/main_pilotnet_execution.py
 """
