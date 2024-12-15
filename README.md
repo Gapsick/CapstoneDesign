@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 # README.md 자동 생성 코드
 readme_content = """
 ## **🚗 Autonomous RC Car Project**  
@@ -10,4 +8,3 @@ readme_content = """
 
 ## **📁 프로젝트 구조**  
 
->>>>>>> 043c3c11fe39f79607bcad131db913e98fd22343
