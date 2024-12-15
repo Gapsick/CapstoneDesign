@@ -10,7 +10,10 @@ PilotNet 모델을 사용하여 **End-to-End** 방식으로 경로를 추종하�
 ---
 
 ## **폴더 구조**
+├── dataset_creation/ │ ├── 1_path_update.py │ ├── 2_check_missing_files.py │ ├── 3_remove_missing_files.py │ └── 4_angle_verification.py ├── dataset_preprocessing/ │ ├── 5_visualize_data_distribution.py │ ├── 6_oversampling.py │ ├── 6_1_combination.py │ └── 7_crop_and_augment.py ├── model_execution/ │ └── main_pilotnet_execution.py ├── best_pilotnet_model.pth ├── README.md └── generate_readme.py
 
+yaml
+코드 복사
 
 ---
 
@@ -58,3 +61,4 @@ PilotNet 모델을 사용하여 **End-to-End** 방식으로 경로를 추종하�
 ```bash
 python3 dataset_creation/1_path_update.py
 python3 dataset_preprocessing/5_visualize_data_distribution.py
+"""
