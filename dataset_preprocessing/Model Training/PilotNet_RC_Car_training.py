@@ -66,7 +66,7 @@ class PilotNet(nn.Module):
         return x
 
 # **3. 데이터 로더 설정**
-csv_path = "C:/Code/CapstoneDesign/CapstoneDesign/steering_data_preprocessor/data/training_data_cleaned_updated.csv"
+csv_path = "C:/Code/CapstoneDesign/CapstoneDesign/steering_data_preprocessor/data/training_data_cleaned.csv"
 
 # 데이터 로드
 df = pd.read_csv(csv_path)
